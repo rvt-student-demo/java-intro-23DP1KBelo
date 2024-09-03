@@ -9,6 +9,11 @@ public class App
     {
 
        System.out.println("Hello world!");
+       // my code starts here
+       System.out.println(age);
+       System.out.println(name);
+       // my code ends
+
 
        
     }
