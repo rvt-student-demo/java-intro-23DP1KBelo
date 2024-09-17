@@ -11,16 +11,14 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ievadi savu vārdu: ");
-        String name = scanner.nextLine();
+        System.out.println("Give speed: ");
+        int speed = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Ievadi savu uzvārdu: ");
-        String lastName = scanner.nextLine();
+        if (speed > 120) {
+            System.out.println("Speeding ticket!");
+        }
 
-        System.out.println("Ievadiet savu grupu: ");
-        String group = scanner.nextLine();
 
-        System.out.println("Students: " + name + " " + lastName + ", " + "grupa: " + group);
 
     }
 
