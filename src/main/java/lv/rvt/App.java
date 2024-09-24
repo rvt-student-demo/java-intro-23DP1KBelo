@@ -11,10 +11,16 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Last number?");
         int num = Integer.valueOf(scanner.nextLine());
-        for ( int i = num; i < 101; i++){
-            System.out.println(i);
+        int sum = 0;
+
+        for (int i = num; i > 0; i--) {
+            sum = sum + i;
         }
+        System.out.println("The sum is " + sum);
+
+
 
       
     }
