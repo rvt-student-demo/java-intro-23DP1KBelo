@@ -9,21 +9,18 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("How many times?");
-        int input = Integer.valueOf(scanner.nextLine());
-
-        for (int i = 0; i<input; i++){
-            
-            printText();
+        printUntilNumber(5);
 
         }       
         
+    
+
+    public static void printUntilNumber(int number) {
+        int i = 1;
+        while ( i < number + 1){
+            System.out.println(i);
+            i ++;
+        }
     }
 
-    public static void printText () {
-        System.out.println("In a hole in the ground there lived a method");
-    }
-
-}
+} 
