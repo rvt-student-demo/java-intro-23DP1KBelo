@@ -9,18 +9,21 @@ public class App
 {
     public static void main( String[] args )
     {
-        printUntilNumber(5);
-
+        divisibleByThreeInRange(3, 6);
         }       
         
+    public static void divisibleByThreeInRange( int beginning, int end){
+       for ( int i = beginning; i < end;){
+        if (beginning % 3 == 0){
+            System.out.println(beginning);
+        }
+        beginning ++;
+       }
+    }
+// Jāpabeidz majās
+
+
     
 
-    public static void printUntilNumber(int number) {
-        int i = 1;
-        while ( i < number + 1){
-            System.out.println(i);
-            i ++;
-        }
-    }
+ }
 
-} 
