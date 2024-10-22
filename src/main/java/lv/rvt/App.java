@@ -11,46 +11,29 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(6);
+        numbers.add(-1);
+        numbers.add(5);
+        numbers.add(1);
 
-       ArrayList<Integer> skaitli = new ArrayList<>();
+        System.out.println("The numbers in the range [0, 5]");
+        printNumbersInRange(numbers, 0, 5);
 
-       int input = 0;
+        System.out.println("The numbers in the range [3, 10]");
+        printNumbersInRange(numbers, 3, 10);
+
        
-       while (true){
-            input = Integer.valueOf(scanner.nextLine());   
-            if (input == -1){
-                break;     
-       }
-            skaitli.add(input);
     }
-    
-    System.out.print("From where? ");
-    int index1 = Integer.valueOf(scanner.nextLine());
-
-    System.out.print("To where? ");
-    int index2 = Integer.valueOf(scanner.nextLine());
-       
-
-       while(true){
-            if (index1 < 0 || index1 > skaitli.size()){
-                System.out.print("From where? ");
-                index1 = Integer.valueOf(scanner.nextLine());
-            } else if (index2 >= skaitli.size() || index2 <= 0){
-                System.out.print("To where? ");
-                index2 = Integer.valueOf(scanner.nextLine());
-            } else{
-                break;
+    public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit){
+        for(int i: numbers){
+            if (i >= lowerLimit && i<= upperLimit){
+                System.out.println(i);
             }
-       }
-
-       for( int i = index1; i <= index2; i++ ){
-            System.out.println(skaitli.get(i));
-       }
-
-
-       
-     }   
+        }
+    }
 }
 
   
