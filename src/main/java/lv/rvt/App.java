@@ -17,23 +17,26 @@ public class App
 
        int input = 0;
        
-       while (input !=  -1){
-            input = Integer.valueOf(scanner.nextLine());        
-            skaitli.add(input);
+       while (true){
+            input = Integer.valueOf(scanner.nextLine());   
+            if (input == -1){
+                break;     
        }
-       
+            skaitli.add(input);
+    }
+    
+    System.out.print("From where? ");
+    int index1 = Integer.valueOf(scanner.nextLine());
 
-       System.out.print("From where? ");
-       int index1 = Integer.valueOf(scanner.nextLine());
+    System.out.print("To where? ");
+    int index2 = Integer.valueOf(scanner.nextLine());
        
-       System.out.print("To where? ");
-       int index2 = Integer.valueOf(scanner.nextLine());
 
        while(true){
-            if (index1 < 0){
+            if (index1 < 0 || index1 > skaitli.size()){
                 System.out.print("From where? ");
                 index1 = Integer.valueOf(scanner.nextLine());
-            } else if (index2 > skaitli.size() || index2 < 0){
+            } else if (index2 >= skaitli.size() || index2 <= 0){
                 System.out.print("To where? ");
                 index2 = Integer.valueOf(scanner.nextLine());
             } else{
