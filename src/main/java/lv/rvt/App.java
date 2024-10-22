@@ -13,29 +13,43 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-       ArrayList<Integer> intList = new ArrayList<>();
+       ArrayList<Integer> skaitli = new ArrayList<>();
 
-       int input = Integer.valueOf(scanner.nextLine());        
-       intList.add(input);
-        
-        //Izmainām uzdevuma nosaukumu un saskaitām visu elemnu summu, kas atrodas ArrayList'ā
-        int listSum = input;
-
-        while(input != 0 ) {
+       int input = 0;
+       
+       while (input !=  -1){
             input = Integer.valueOf(scanner.nextLine());        
-            intList.add(input);
-            listSum = listSum + input;
-        }
-        System.out.println(intList.get(0));
-        System.out.println(listSum);
-        
-     }
-     
-     
-     
-    
+            skaitli.add(input);
+       }
+       
+
+       System.out.print("From where? ");
+       int index1 = Integer.valueOf(scanner.nextLine());
+       
+       System.out.print("To where? ");
+       int index2 = Integer.valueOf(scanner.nextLine());
+
+       while(true){
+            if (index1 < 0){
+                System.out.print("From where? ");
+                index1 = Integer.valueOf(scanner.nextLine());
+            } else if (index2 > skaitli.size() || index2 < 0){
+                System.out.print("To where? ");
+                index2 = Integer.valueOf(scanner.nextLine());
+            } else{
+                break;
+            }
+       }
+
+       for( int i = index1; i <= index2; i++ ){
+            System.out.println(skaitli.get(i));
+       }
+
+
+       
+     }   
 }
 
-        
+  
  
 
