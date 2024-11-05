@@ -18,6 +18,26 @@ public class Person {
             this.age = this.age + 1;
         }
     }
+
+    public int returnAge() {
+        return this.age;
+    }
+
+    public boolean isOfLegalAge() {
+        return this.age >= 18;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+
+    
+
+
+
 }
 
 
