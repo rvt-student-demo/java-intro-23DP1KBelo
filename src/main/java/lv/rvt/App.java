@@ -10,13 +10,14 @@ import java.util.ArrayList;
 public class App 
 {
   public static void main(String[] args) {
-    Agent bond = new Agent("James", "Bond");
+    Person per1 = new Person("Kristiana");
+    
+    per1.setHeight(163);
+    per1.setWeight(67);
 
-  bond.toString(); // prints nothing
-  System.out.println(bond);
-
-  Agent ionic = new Agent("Ionic", "Bond");
-  System.out.println(ionic);
+    System.out.println(per1);
+    
   }
-  
+
 }
+  

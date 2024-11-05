@@ -8,11 +8,8 @@ public class Agent {
         this.fname = fname;
         this.lname = lname;
     }
-
-    public void print(){
-        System.out.println("My name is " + this.lname + ", " + this.fname + " "+ this.lname);
-    }
-
+    
+    @Override
     public String toString(){
         return "My name is " + this.lname + ", " + this.fname + " "+ this.lname;
     }
