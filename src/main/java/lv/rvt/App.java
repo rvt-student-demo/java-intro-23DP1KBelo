@@ -11,12 +11,17 @@ public class App
 {
   public static void main( String[] args ){
     
-    Person per1 = new Person("John");
+    DecreasingCounter counter = new DecreasingCounter(10);
 
-    per1.printPerson();
-    for(int i = 0; i<35 ; i++){
-      per1.growOlder();
-    }
-    per1.printPerson();
+    counter.printValue();
+
+    counter.decrement();
+    counter.printValue();
+    
+    counter.decrement();
+    counter.printValue();
+
+
+
   }
 }
