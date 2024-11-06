@@ -10,14 +10,22 @@ import java.util.ArrayList;
 public class App 
 {
   public static void main(String[] args) {
-    Statistics statistics = new Statistics();
-    statistics.addNumber(3);
-    statistics.addNumber(5);
-    statistics.addNumber(1);
-    statistics.addNumber(2);
-    System.out.println("Count: " + statistics.getCount());
-    System.out.println("Sum: " + statistics.sum());
-    System.out.println("Average: " + statistics.average());
+    Scanner scanner = new Scanner(System.in);
+    int i = 0;
+
+    Statistics viens= new Statistics();
+
+    while (true){
+      if ( i == -1){
+         break;
+      } else{
+        viens.addNumber(i);
+        i = Integer.valueOf(scanner.nextLine());
+      }
+    }
+
+    System.out.println("Sum: " + viens.sum());
+
   }
 
 }
