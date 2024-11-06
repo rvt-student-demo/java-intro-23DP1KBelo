@@ -10,12 +10,12 @@ import java.util.ArrayList;
 public class App 
 {
   public static void main(String[] args) {
-    Person per1 = new Person("Kristiana");
-    
-    per1.setHeight(163);
-    per1.setWeight(67);
-
-    System.out.println(per1);
+    Statistics statistics = new Statistics();
+    statistics.addNumber(3);
+    statistics.addNumber(5);
+    statistics.addNumber(1);
+    statistics.addNumber(2);
+    System.out.println("Count: " + statistics.getCount());
     
   }
 

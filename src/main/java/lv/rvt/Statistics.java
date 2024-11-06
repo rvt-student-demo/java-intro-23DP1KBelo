@@ -3,17 +3,16 @@ package lv.rvt;
 public class Statistics {
     private int count;
 
-    public Statistics(int count) {
+    public Statistics() {
         this.count = count;
     }
 
     public void addNumber(int number) {
-        // write code here
-        number += 1;
+        this.count ++;
+        
     }
 
-    public void getCount(int kopa) {
-        // write code here
-        
+    public int getCount() {
+        return this.count;
     }
 }
