@@ -6,16 +6,16 @@ public class Person {
     private int weight;
     private int height;
 
-    public Person(String name){
+    public Person(String name, int age, int weight, int height){
         this.name = name;
-        this.age = 0;
-        this.weight = 0;
-        this.height = 0;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
     }
 
     @Override
     public String toString(){
-        return this.name + ", age " + this.age + " years";
+        return this.name + ", age " + this.age + " years " + this.height + " cm " + this.weight + " kg";
     }
 
     public void growOlder() {
@@ -43,6 +43,10 @@ public class Person {
 
     public void setWeight(int newWeight) {
         this.weight = newWeight;
+    }
+
+    public void setAge(int newAge){
+        this.age = newAge;
     }
 
     public double bodyMassIndex() {
