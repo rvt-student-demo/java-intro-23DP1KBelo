@@ -15,13 +15,11 @@ public class Person {
 
     @Override
     public String toString(){
-        return this.name + ", age " + this.age + " years, my body mass index is " + this.bodyMassIndex();
+        return this.name + ", age " + this.age + " years";
     }
 
     public void growOlder() {
-        if (this.age < 30) {
-            this.age = this.age + 1;
-        }
+        this.age = this.age + 1;
     }
 
     public int returnAge() {
