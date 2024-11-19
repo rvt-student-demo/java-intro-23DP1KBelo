@@ -16,19 +16,22 @@ public class Person {
     // Second constructor wth only one parameter
     public Person(String name){
         this(name, 0, 0, 0);
-
     }
 
     @Override
     public String toString() {
         return this.name + ", BMI: " + this.bodyMassIndex() + ", maximum heart rate: " + this.maximumHeartRate();
     }
+
     public double maximumHeartRate() {
         return 206.3 - (0.711 * this.age);
     }
 
     public void growOlder() {
         this.age = this.age + 1;
+    }
+    public void growOlder(int years) {
+        this.age = this.age + years;
     }
 
     public int returnAge() {

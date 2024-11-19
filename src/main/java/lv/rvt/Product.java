@@ -31,6 +31,8 @@ public class Product {
         return this.name + " (" + this.weight+ " kg" +")" + " can be found from the " + this.location;
     }
 
+    
+
     public void printProduct(){
         System.out.println(this.name + ", price " + this.price +", " + this.quantity + " pcs" );
         
