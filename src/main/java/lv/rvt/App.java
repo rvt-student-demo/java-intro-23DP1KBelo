@@ -10,31 +10,20 @@ import java.util.Arrays;
 
 public class App 
 {
-    public static void main(String[] args) throws Exception {
-      BufferedReader reader = Utils.getReader("persons.csv");
-      ArrayList<Person> persons = new ArrayList<>();
+  public static void main(String[] args) throws Exception {
+    Timer timer = new Timer();
 
-      String line;
-      // Ignore title row
-      reader.readLine();
+    while (true) {
+        System.out.println(timer);
+        timer.advance();
 
-      while((line = reader.readLine())!= null) {
-        String[] parts = line.split(", ");
-
-
-        // {name, age, weight, height} masīvs
-        Person person = new Person(
-          parts[0],
-           Integer.valueOf(parts[1]), 
-           Integer.valueOf(parts[2]), 
-           Integer.valueOf(parts[3])
-          );
-          persons.add(person);
+        try {
+          Thread.sleep(10);
+      } catch (Exception e) {
       }
+  }
 
-      for (Person person : persons) {
-        System.out.println(person);
-      }
+    
   }
 }
   
