@@ -2,7 +2,7 @@ package lv.rvt;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-
+import java.nio.file.Files;
 import java.util.Scanner;
 
 import org.w3c.dom.css.Counter;
@@ -13,19 +13,15 @@ import java.util.Arrays;
 public class App 
 {
   public static void main(String[] args) throws Exception {
-    DecreasingCounter counter = new DecreasingCounter(10);
-    DecreasingCounter counter1 = new DecreasingCounter();
+    BufferedReader reader = Helper.getReader("persons.csv");
 
-    counter.decrement();
-    counter.decrement();
-    counter.increase();
+    reader.readLine();
 
-    counter1.increase();
-    counter1.increase();
-    counter1.increase();
-
-    counter.printValue();
-    counter1.printValue();
+    String line;
+    while((line = reader.readLine()) != null){
+      System.out.println(line);
+    }
+    
   }
 }
   

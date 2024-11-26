@@ -21,7 +21,7 @@ public class Helper {
     private static Path getFilePath(String filename) throws FileNotFoundException {
         Path filePath = Paths.get("data", filename);
         if(!Files.exists(filePath)){
-            throw new FileNotFoundException("File not found"+ filename);
+            throw new FileNotFoundException("File not found "+ filename);
         }
         return filePath;
     }
