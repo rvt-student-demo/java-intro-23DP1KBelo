@@ -70,6 +70,11 @@ public class Person {
         throw new UnsupportedOperationException("Unimplemented method 'add'");
     }
 
+       
+   public String toCsvRow(){
+        return this.name +  ", " + this.age +  ", " + this.height+  ", " + this.weight;
+    }
+
 }
 
 

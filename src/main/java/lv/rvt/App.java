@@ -1,17 +1,19 @@
 package lv.rvt;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 public class App 
 {
   public static void main(String[] args) throws Exception {
 
-    ArrayList<Person> persons = PersonManager.getPersonList();
+    // BufferedWriter writer = Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
 
-    for (Person person : persons){
-      System.out.println(person);
-    }
+    Person person = new Person("maija", 20, 30, 40);
+    PersonManager.addPerson(person);
+
   }
 }
   
