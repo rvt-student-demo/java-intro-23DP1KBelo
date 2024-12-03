@@ -20,7 +20,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return this.name + ", BMI: " + this.bodyMassIndex() + ", maximum heart rate: " + this.maximumHeartRate();
+         return this.name + ", age: " + this.age + ", weight: " + this.weight + ", height: " + this.height;
     }
 
     public double maximumHeartRate() {
@@ -64,6 +64,10 @@ public class Person {
     public double bodyMassIndex() {
         double heigthPerHundred = this.height / 100.0;
         return this.weight / (heigthPerHundred * heigthPerHundred);
+    }
+    public void add(String[] pers) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
     }
 
 }
