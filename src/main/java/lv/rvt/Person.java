@@ -72,7 +72,7 @@ public class Person {
 
        
    public String toCsvRow(){
-        return this.name +  ", " + this.age +  ", " + this.height+  ", " + this.weight;
+        return this.name +  ", " + this.age +  ", " + this.weight+  ", " + this.height;
     }
 
 }
