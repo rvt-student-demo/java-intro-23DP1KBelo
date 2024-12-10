@@ -7,7 +7,7 @@ public class Person {
     private double height;
 
     // All args Class constructor
-    public Person(String name, int age, double weight, double height){
+    public Person(String name, int age, double height, double weight){
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -20,7 +20,7 @@ public class Person {
 
     @Override
     public String toString() {
-         return this.name + ", age: " + this.age + ", weight: " + this.weight + ", height: " + this.height;
+         return this.name + ", age: " + this.age + ", height: " + this.height+ ", weight: " + this.weight ;
     }
 
     public double maximumHeartRate() {
