@@ -40,10 +40,24 @@ public class App
           System.out.println("Thanks, bye bye!");
           isProgramRunnng = false;
       } else if (command.equals("show")){
-          ArrayList<Person> persons = PersonManager.getPersonList();
-    
+        ArrayList<Person> persons = PersonManager.getPersonList();
+
+        System.out.println("--------------------------------------------------------");
+        System.out.printf(" %-10s |", "Name");
+        System.out.printf(" %-4s |", "Age");
+        System.out.printf(" %-4s |", "Weight");
+        System.out.printf("  %-4s |", "Height");
+        System.out.printf(" %-2s |", "Body mass index");
+        System.out.println();
           for (Person person : persons){
-            System.out.println(person);
+            System.out.println("--------------------------------------------------------");
+            System.out.printf(" %-10s |", person.getName());
+            System.out.printf(" %-4d |", person.getAge());
+            System.out.printf( " %-6.2f |", person.getWeight());
+            System.out.printf(" %-7.2f |", person.getHeight());
+            System.out.printf(" %-15.2f |", person.bodyMassIndex());
+            System.out.println();
+
           }
       }else if (command.equals("help")){
         System.out.println("show: parāda visas personas no csv faila");
