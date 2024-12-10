@@ -31,17 +31,6 @@ public class PaymentCard {
 
     }
 
-    public void eatAffordably(){
-        if (this.balance - 2.60 > 0 ){
-            this.balance -= 2.60;
-        }
-    }
-
-    public void eatHeartily(){
-        if (this.balance - 4.60 > 0 ){
-            this.balance -= 4.60;
-        }
-    }
 
     public String toString(){
         return "The card has a balance of "+ this.balance+ " euros" ;
