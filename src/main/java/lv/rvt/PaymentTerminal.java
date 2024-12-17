@@ -38,6 +38,28 @@ public class PaymentTerminal {
         }
         return change;
     }
+    boolean wasSuccessful = true;
+    public boolean eatAffordably(PaymentCard card) {
+        if (card.balance() - 2.50 > 0){
+            card.takeMoney(2.50);
+            this.affordableMeals++;
+            return wasSuccessful = true;
+        } else{
+            return wasSuccessful = false;
+        }
+    }
+
+    
+    public boolean eatHeartily(PaymentCard card) {
+        if (card.balance() - 4.30 > 0){
+            card.takeMoney(4.30);
+            this.heartyMeals++;
+            return wasSuccessful = true;
+        } else{
+            return wasSuccessful = false;
+        }
+    }
+    
     public String toString() {
         return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
     }

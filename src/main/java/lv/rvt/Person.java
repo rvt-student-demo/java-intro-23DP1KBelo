@@ -3,6 +3,7 @@ package lv.rvt;
 public class Person {
     private String name;
     private int age;
+    private SimpleDate birthday;
     private double weight;
     private double height;
 
@@ -17,10 +18,18 @@ public class Person {
     public Person(String name){
         this(name, 0, 0, 0);
     }
+    public Person(String name, SimpleDate date) {
+        this.name = name;
+        this.birthday = date;
+    }
+    public Person(String name, int day, int month, int year) {
+        this.name = name;
+        this.birthday = new SimpleDate(day, month, year);
+    }
 
     @Override
     public String toString() {
-         return this.name + ", age: " + this.age + ", height: " + this.height+ ", weight: " + this.weight ;
+        return this.name + ", born on " + this.birthday ;
     }
 
     public double maximumHeartRate() {
