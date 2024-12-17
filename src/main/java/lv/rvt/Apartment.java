@@ -18,6 +18,13 @@ public class Apartment {
             return false;
         }
     }
-
-
+    int sum = 0;
+    public int priceDifference(Apartment compared){
+        if (this.squares*this.pricePerSquare > compared.squares*compared.pricePerSquare){
+            sum = this.squares*this.pricePerSquare - compared.squares*compared.pricePerSquare;
+        } else{
+            sum = compared.squares*compared.pricePerSquare - this.squares*this.pricePerSquare;
+        }
+        return sum;
+    }
 }
