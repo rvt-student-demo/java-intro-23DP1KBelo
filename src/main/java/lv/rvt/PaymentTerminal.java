@@ -43,6 +43,7 @@ public class PaymentTerminal {
         if (card.balance() - 2.50 > 0){
             card.takeMoney(2.50);
             this.affordableMeals++;
+            this.money += 2.50;
             return wasSuccessful = true;
         } else{
             return wasSuccessful = false;
@@ -54,10 +55,16 @@ public class PaymentTerminal {
         if (card.balance() - 4.30 > 0){
             card.takeMoney(4.30);
             this.heartyMeals++;
+            this.money += 4.30;
             return wasSuccessful = true;
         } else{
             return wasSuccessful = false;
         }
+    }
+
+    public void addMoneyToCard(PaymentCard card, double sum) {
+        card.addMoney(sum);
+        
     }
     
     public String toString() {
