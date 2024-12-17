@@ -27,4 +27,12 @@ public class Apartment {
         }
         return sum;
     }
+
+    public boolean moreExpensiveThan(Apartment compared){
+        if(this.squares*this.pricePerSquare > compared.squares*compared.pricePerSquare){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
