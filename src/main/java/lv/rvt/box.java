@@ -36,6 +36,16 @@ public class box {
         return new box(1.25*oldBox.width(), 1.25*oldBox.height(), 1.25*oldBox.lenght);  
     }
 
+    public box smallerbox(box oldBox){
+        return new box(0.75*oldBox.width(), 0.75*oldBox.height(), 0.75*oldBox.lenght);  
+    }
+
+    public boolean nests(box outsideBox){
+        if( this.height < outsideBox.height && this.lenght < outsideBox.lenght && this.width < outsideBox.width){
+            return true;
+        }
+        return false;
+    }
     public double lenght(){
         return this.lenght;
     }
@@ -71,9 +81,4 @@ public class box {
     public double faceArea(){
         return FaceArea();
     }
-
-    public boolean nests(box outsidebox){
-        
-    }
-
 }

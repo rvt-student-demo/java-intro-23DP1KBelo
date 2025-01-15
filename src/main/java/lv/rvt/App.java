@@ -22,6 +22,9 @@ public class App {
       System.out.println(box.lenght());
       System.out.println(box2.height());
 
+      System.out.println("");
+      System.out.println(box.nests(box3));
+
       
   }
 }
