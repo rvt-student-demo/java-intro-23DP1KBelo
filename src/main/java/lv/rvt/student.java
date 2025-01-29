@@ -5,14 +5,23 @@ public class student extends Person {
 
     public student(String name, String address){
         super(name, address);
-        this.credit = credit;
+        credit = this.credit;
+        credit = 0;
     }
 
-    this.credit = 0;
 
     public int study(){
-        int summa = credit+1;
-        return summa;
+        credit++;
+        return credit;
+    }
+
+    public int credits(){
+        return credit;
+    }
+
+     @Override
+     public String toString() {
+        return super.toString() + "\n\t"+ "Study credits " +this.credit;
     }
 
 }
