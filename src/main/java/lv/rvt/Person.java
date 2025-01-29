@@ -6,30 +6,23 @@ public class Person {
     private SimpleDate birthday;
     private double weight;
     private double height;
+    private String address;
 
-    // All args Class constructor
-    public Person(String name, int age, double height, double weight){
+    //all args 
+    public Person(String name, int age, double weight, double height, String address){
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.height = height;
-    }
-    // Second constructor wth only one parameter
-    public Person(String name){
-        this(name, 0, 0, 0);
-    }
-    public Person(String name, SimpleDate date) {
-        this.name = name;
-        this.birthday = date;
-    }
-    public Person(String name, int day, int month, int year) {
-        this.name = name;
-        this.birthday = new SimpleDate(day, month, year);
+        this.address = address;
     }
 
+    public Person(String name, String address){
+        this(name, 0, 0, 0, address );
+    }
     @Override
     public String toString() {
-        return this.name + ", born on " + this.birthday ;
+        return this.name + "\n\t" + this.address;
     }
 
     public double maximumHeartRate() {
