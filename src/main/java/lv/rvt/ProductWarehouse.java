@@ -13,4 +13,13 @@ public class ProductWarehouse extends Warehouse{
         return this.productName;
     }
 
+    public void setName(String newName){
+        this.productName = newName;
+    }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return super.toString();
+    }
 }
