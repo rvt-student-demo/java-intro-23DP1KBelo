@@ -17,7 +17,7 @@ public class App {
       // etc
       
       // and now we have the history:
-      System.out.println(juice.history());
+      System.out.println(juice.history()); // [100
   }
 }
   
