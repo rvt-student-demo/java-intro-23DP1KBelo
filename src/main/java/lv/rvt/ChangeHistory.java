@@ -16,7 +16,6 @@ public class ChangeHistory {
     public void clear(){
         this.records.clear();
     }
-
     public String toString(){
         return this.records.toString();
     }
