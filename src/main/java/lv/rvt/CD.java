@@ -16,4 +16,9 @@ public class CD implements Packable{
         return 0.1;
     }
 
+    @Override
+    public String toString(){
+        return this.artist + ": " + this.name +  "(" + this.year + ")";
+    }
+
 }
