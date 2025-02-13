@@ -5,7 +5,7 @@ public class CD implements Packable{
     private String name;
     private Integer year;
 
-    public CD(String Artist, String name, int year){
+    public CD(String artist, String name, int year){
         this.artist = artist;
         this.name = name;
         this.year = year;
