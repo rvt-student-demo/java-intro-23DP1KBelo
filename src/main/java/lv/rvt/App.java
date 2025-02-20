@@ -6,9 +6,11 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import lv.rvt.tools.ConsoleColors;
+
 public class App {
     public static void main(String[] args){
-        System.out.println("\033[1;32m");
+        System.out.print(ConsoleColors.PURPLE_BRIGHT);
         System.out.println("hello world!");
     }
 }
