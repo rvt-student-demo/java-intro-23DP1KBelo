@@ -10,6 +10,7 @@ import lv.rvt.tools.ConsoleColors;
 
 public class App {
     public static void main(String[] args){
+        System.out.println(ConsoleColors.YELLOW_BOLD);
         System.out.print(ConsoleColors.BLUE_BACKGROUND);
         System.out.println("hello world!");
     }
