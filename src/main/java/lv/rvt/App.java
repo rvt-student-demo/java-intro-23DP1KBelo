@@ -12,35 +12,21 @@ public class App {
     public static void main(String[] args){
 
 
-        System.out.print(
-        ConsoleColors.BLUE_BACKGROUND +
-        "               "+
-        ConsoleColors.BLUE_BACKGROUND +
-        "               "+
-        ConsoleColors.BLUE_BACKGROUND +
-        "             \n"+
-        ConsoleColors.GREEN_BACKGROUND +
-        "               "+
-        ConsoleColors.GREEN_BACKGROUND +
-        "               "+
-        ConsoleColors.GREEN_BACKGROUND +
-        "             \n"+
-        ConsoleColors.BLUE_BACKGROUND +
-        "               "+
-        ConsoleColors.BLUE_BACKGROUND +
-        "               "+
-        ConsoleColors.BLUE_BACKGROUND +
-        "             \n"+
-
-        ConsoleColors.RESET);
-
-        //BACKGROUND + COLOR + RESET
-        // System.out.print(
-        //     ConsoleColors.YELLOW_BOLD+    
-        //     ConsoleColors.BLUE_BACKGROUND+
-        //     "hello world!"
-        //     +ConsoleColors.RESET);
-
+        MoneyTest a = new MoneyTest(10,0);
+        MoneyTest b = new MoneyTest(5,0);
+        
+        MoneyTest c = a.plus(b);
+        
+        System.out.println(a);  // 10.00e
+        System.out.println(b);  // 5.00e
+        System.out.println(c);  // 15.00e
+        
+        a = a.plus(c);          // NB: a new MoneyTestobject is created, and is placed "at the end of the strand connected to a"
+        //  the old 10 euros at the end of the strand disappears and the Java garbage collector takes care of it
+        
+        System.out.println(a);  // 25.00e
+        System.out.println(b);  // 5.00e
+        System.out.println(c);  // 15.00e
 
     }
 }
